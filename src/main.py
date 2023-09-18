@@ -1,14 +1,17 @@
 """
 Top level script.
 """
-from lib.func_utils import power
+from lib.functions import load_crime_data, calculate_standard_deviation, calculate_mean, calculate_quartiles, pretty_hist_plot
 
 if __name__ == "__main__":
-    squarer = power(2)
-    print(f"Square of 3 is {squarer(3)}.")
+    df = load_crime_data()
 
-    cuber = power(3)
-    print(f"Cube of 4 is {cuber(4)}.")
+    # subset numeric variables
+    victim_ages = df['Vict Age'].values
+    crime_times = df['TIME OCC'].values
 
-    inverter = power(-1)
-    print(f"Inverse of 2 is {inverter(-2)}.")
+    victim_ages_clean = df['Vict Age'][(df['Vict Age'] > 0) & (df['Vict Age'] < 95)]
+
+    data_dict = {
+        
+    }
