@@ -17,7 +17,8 @@ try:
         calculate_quartiles,
         pretty_hist_plot,
     )
-except:
+except ImportError: 
+    # if running as a module
     from src.lib.functions import (
         load_crime_data,
         calculate_standard_deviation,
@@ -71,7 +72,7 @@ if __name__ == "__main__":
 
     output_df = format_desc_stats(data_dict=data_dict)
 
-    with open("/workspaces/descriptive-stats-using-ci/outputs/DESC_STATS.md", "w") as f:
+    with open("/workspaces/descriptive-stats-using-ci/outputs/DESC_STATS.md", "w+") as f:
         # Writing data to a file
         f.write("\n")
         f.writelines(output_df.to_markdown())
