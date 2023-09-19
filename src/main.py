@@ -1,6 +1,7 @@
 """
 Top level script.
 """
+# ruff: noqa: E402
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +14,7 @@ from lib.functions import (
     calculate_mean,
     calculate_quartiles,
     pretty_hist_plot,
-) # noqa: E402
+)
 
 
 
