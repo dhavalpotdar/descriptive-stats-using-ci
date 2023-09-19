@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,6 +8,8 @@ import math
 
 
 def load_crime_data():
+    Path("/data").mkdir(parents=True, exist_ok=True)
+
     FILENAME = \
         "/workspaces/descriptive-stats-using-ci/data/Crime_Data_from_2020_to_Present.csv"
     DATALINK = (
