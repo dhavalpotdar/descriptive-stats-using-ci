@@ -6,8 +6,8 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sys.path.append('/workspaces/descriptive-stats-using-ci/src/lib') 
-from lib.functions import (
+sys.path.append('/workspaces/descriptive-stats-using-ci/src') 
+from src.lib.functions import (
     load_crime_data,
     calculate_standard_deviation,
     calculate_mean,
