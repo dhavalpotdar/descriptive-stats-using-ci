@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest -vv --cov=main --cov=src --cov=src/lib tests/test_*.py
-	python -m pytest --nbval src/notebooks/*.ipynb
+	python -m pytest --nbval src/*.ipynb
 
 format:	
 	black src/lib/*.py src/*.py tests/*.py
