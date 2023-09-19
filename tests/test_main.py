@@ -2,7 +2,7 @@ import sys
 import numpy as np
 
 sys.path.append('/workspaces/descriptive-stats-using-ci/src')
-from main import format_desc_stats
+from src.main import format_desc_stats
 
 def test_format_desc_stats():
 
