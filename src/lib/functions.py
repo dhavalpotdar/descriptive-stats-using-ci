@@ -13,7 +13,7 @@ def load_crime_data():
         pass
 
     # FILENAME = \
-    #     "/workspaces/descriptive-stats-using-ci/data/Crime_Data_from_2020_to_Present.csv"
+    # "/workspaces/descriptive-stats-using-ci/data/Crime_Data_from_2020_to_Present.csv"
     DATALINK = (
         r"https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD"
     )
