@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     output_df = format_desc_stats(data_dict=data_dict)
 
-    with open("/workspaces/descriptive-stats-using-ci/outputs/DESC_STATS.md", 
+    with open("outputs/DESC_STATS.md", 
               "a+") as f:
         # Writing data to a file
         f.write("\n")
