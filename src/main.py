@@ -13,7 +13,7 @@ from lib.functions import (
     calculate_mean,
     calculate_quartiles,
     pretty_hist_plot,
-) # noqa: F402
+) # noqa: E402
 
 
 
