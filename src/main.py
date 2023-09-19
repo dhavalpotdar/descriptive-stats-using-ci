@@ -73,7 +73,7 @@ if __name__ == "__main__":
     output_df = format_desc_stats(data_dict=data_dict)
 
     with open("outputs/DESC_STATS.md", 
-              "a+") as f:
+              "w") as f:
         # Writing data to a file
         f.write("\n")
         f.writelines(output_df.to_markdown())
