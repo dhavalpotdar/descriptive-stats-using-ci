@@ -11,6 +11,19 @@ from lib.functions import (
     pretty_hist_plot,
 )
 
+def format_desc_stats(data_dict):
+    output = pd.DataFrame.from_dict(
+    data_dict,
+    orient="index",
+    columns=[
+        "Mean",
+        "Std. Deviation",
+        "25th Percentile",
+        "Median",
+        "75th Percentile",
+    ])
+    return output
+
 if __name__ == "__main__":
     df = load_crime_data()
 
@@ -37,17 +50,7 @@ if __name__ == "__main__":
         ],
     }
 
-    output_df = pd.DataFrame.from_dict(
-        data_dict,
-        orient="index",
-        columns=[
-            "Mean",
-            "Std. Deviation",
-            "25th Percentile",
-            "Median",
-            "75th Percentile",
-        ],
-    )
+    output_df = format_desc_stats(data_dict=data_dict)
 
     with open("/workspaces/descriptive-stats-using-ci/outputs/DESC_STATS.md", "w") as f:
         # Writing data to a file
