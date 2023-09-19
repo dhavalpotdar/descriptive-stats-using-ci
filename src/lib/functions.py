@@ -18,11 +18,13 @@ def load_crime_data():
         r"https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD"
     )
 
-    if not os.path.isfile(FILENAME):
-        df = pd.read_csv(DATALINK)
-        df.to_csv(FILENAME, index=None)
-    else:
-        df = pd.read_csv(FILENAME)
+    # if not os.path.isfile(FILENAME):
+    #     df = pd.read_csv(DATALINK)
+    #     df.to_csv(FILENAME, index=None)
+    # else:
+    #     df = pd.read_csv(FILENAME)
+
+    df = pd.read_csv(FILENAME)
 
     return df
 
