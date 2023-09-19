@@ -8,7 +8,10 @@ import math
 
 
 def load_crime_data():
-    Path("/data").mkdir(parents=True, exist_ok=True)
+
+    if not os.path.exists("/workspaces/descriptive-stats-using-ci/data/"):
+        os.makedirs("/workspaces/descriptive-stats-using-ci/data/")
+        pass
 
     FILENAME = \
         "/workspaces/descriptive-stats-using-ci/data/Crime_Data_from_2020_to_Present.csv"
