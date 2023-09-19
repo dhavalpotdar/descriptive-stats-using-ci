@@ -7,10 +7,10 @@ from src.lib.functions import (
 )
 
 
-# def test_load_crime_data():
-#     df = load_crime_data()
-#     assert df.shape[0] == 798242
-#     assert df.shape[1] == 28
+def test_load_crime_data():
+    df = load_crime_data()
+    assert df.shape[0] == 798242
+    assert df.shape[1] == 28
 
 
 def test_calculate_mean():
