@@ -8,8 +8,8 @@ import math
 
 def load_crime_data():
 
-    if not os.path.exists("/workspaces/descriptive-stats-using-ci/data/"):
-        os.makedirs("/workspaces/descriptive-stats-using-ci/data/")
+    if not os.path.exists("data/"):
+        os.makedirs("data/")
         pass
 
     FILENAME = \
