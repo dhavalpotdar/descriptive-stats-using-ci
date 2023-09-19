@@ -13,7 +13,7 @@ lint:
 	ruff check src/lib/*.py src/*.py
 
 run:
-	python3 -m src/main.py
+	python3 -m src/main
 
 refactor: format lint
 
