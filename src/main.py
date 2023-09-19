@@ -8,13 +8,23 @@ import matplotlib.pyplot as plt
 
 sys.path.append('/workspaces/descriptive-stats-using-ci/src') 
 sys.path.append('/workspaces/descriptive-stats-using-ci/') 
-from lib.functions import (
-    load_crime_data,
-    calculate_standard_deviation,
-    calculate_mean,
-    calculate_quartiles,
-    pretty_hist_plot,
-)
+
+try:
+    from lib.functions import (
+        load_crime_data,
+        calculate_standard_deviation,
+        calculate_mean,
+        calculate_quartiles,
+        pretty_hist_plot,
+    )
+except:
+    from src.lib.functions import (
+        load_crime_data,
+        calculate_standard_deviation,
+        calculate_mean,
+        calculate_quartiles,
+        pretty_hist_plot,
+    )
 
 
 
