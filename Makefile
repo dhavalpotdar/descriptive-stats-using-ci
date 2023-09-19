@@ -3,16 +3,14 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=src tests/test_*.py
+	python -m pytest -vv --cov=main --cov=src --cov=src/lib tests/test_*.py
+	python -m pytest --nbval src/notebooks/*.ipynb
 
 format:	
 	black src/lib/*.py src/*.py tests/*.py
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py src/lib/*.py src/*.py
-
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
+	ruff check src/lib/*.py src/*.py
 
 refactor: format lint
 
