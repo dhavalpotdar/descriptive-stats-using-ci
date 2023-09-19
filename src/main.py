@@ -2,6 +2,10 @@
 Top level script.
 """
 import sys
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
 sys.path.append('/workspaces/descriptive-stats-using-ci/src')
 from lib.functions import (
     load_crime_data,
@@ -11,8 +15,7 @@ from lib.functions import (
     pretty_hist_plot,
 )
 
-import pandas as pd
-import matplotlib.pyplot as plt
+
 
 
 
