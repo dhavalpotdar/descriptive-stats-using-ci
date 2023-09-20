@@ -6,8 +6,8 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sys.path.append('/workspaces/descriptive-stats-using-ci/src') 
-sys.path.append('/workspaces/descriptive-stats-using-ci/') 
+sys.path.append("/workspaces/descriptive-stats-using-ci/src")
+sys.path.append("/workspaces/descriptive-stats-using-ci/")
 
 try:
     from lib.functions import (
@@ -17,7 +17,7 @@ try:
         calculate_quartiles,
         pretty_hist_plot,
     )
-except ImportError: 
+except ImportError:
     # if running as a module
     from src.lib.functions import (
         load_crime_data,
@@ -28,21 +28,20 @@ except ImportError:
     )
 
 
-
-
-
 def format_desc_stats(data_dict):
     output = pd.DataFrame.from_dict(
-    data_dict,
-    orient="index",
-    columns=[
-        "Mean",
-        "Std. Deviation",
-        "25th Percentile",
-        "Median",
-        "75th Percentile",
-    ])
+        data_dict,
+        orient="index",
+        columns=[
+            "Mean",
+            "Std. Deviation",
+            "25th Percentile",
+            "Median",
+            "75th Percentile",
+        ],
+    )
     return output
+
 
 if __name__ == "__main__":
     df = load_crime_data()

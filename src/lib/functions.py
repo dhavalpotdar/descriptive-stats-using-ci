@@ -7,7 +7,6 @@ import math
 
 
 def load_crime_data():
-
     if not os.path.exists("data/"):
         os.makedirs("data/")
         pass

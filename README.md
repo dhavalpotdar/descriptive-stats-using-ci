@@ -40,4 +40,5 @@ make run
 
 Descriptive statistics can be found [here](outputs/DESC_STATS.md).
 
-
+## Demo
+The demo for this project can be found [here](https://www.loom.com/share/f341888484934beb89b3996ab2db9fd1?sid=eba1eefc-c772-434f-975f-0fdaa614bd58).
